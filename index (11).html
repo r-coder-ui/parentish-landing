@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parentish — Your neighborhood, for parents</title>
+  <meta name="description" content="Connect with parents in your zip code. Share tips, find local events, and vent freely — no judgment." />
+  <meta property="og:title" content="Parentish — Your neighborhood, for parents" />
+  <meta property="og:description" content="Connect with parents in your zip code. Share tips, find local events, and vent freely." />
+  <meta property="og:type" content="website" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #2D6A4F;
+      --green-dark: #1B4332;
+      --green-light: #EAF3DE;
+      --green-text: #3B6D11;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555;
+      --text-tertiary: #999;
+      --border: rgba(0,0,0,0.1);
+      --bg: #fff;
+      --bg-secondary: #fafafa;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-primary: #f0f0f0;
+        --text-secondary: #aaa;
+        --text-tertiary: #666;
+        --border: rgba(255,255,255,0.1);
+        --bg: #111;
+        --bg-secondary: #1a1a1a;
+        --green-light: #0d2b1a;
+        --green-text: #6fcf97;
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text-primary);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .hero {
+      padding: 80px 24px 64px;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 14px;
+      border-radius: 99px;
+      background: var(--green-light);
+      color: var(--green-text);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 32px; }
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 36px;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green);
+      color: #fff;
+      border-radius: 14px;
+      padding: 15px 28px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .cta-btn:hover { background: var(--green-dark); }
+
+    .sub {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    .divider {
+      height: 0.5px;
+      background: var(--border);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.5px;
+      background: var(--border);
+      border-top: 0.5px solid var(--border);
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .feature {
+      background: var(--bg);
+      padding: 32px 24px;
+    }
+
+    .feature-icon {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .feature h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+
+    .feature p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .quote {
+      padding: 64px 24px;
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .quote p {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .quote span {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    .footer {
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      border-top: 0.5px solid var(--border);
+    }
+
+    .footer a {
+      color: var(--text-tertiary);
+      text-decoration: none;
+    }
+
+    .footer a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="badge">Now available on iPhone</div>
+    <h1>Your neighborhood,<br>for parents.</h1>
+    <p>Connect with parents in your zip code. Share tips, find local events, and vent freely — no judgment.</p>
+    <div class="cta-group">
+      <a href="https://apps.apple.com/app/id6746827150" class="cta-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        Download on the App Store
+      </a>
+      <span class="sub">Free · No ads · Your number stays private</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">🏘</div>
+      <h3>Local feed</h3>
+      <p>Tips, vents, and meetups from parents in your zip code.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">😤</div>
+      <h3>Vent freely</h3>
+      <p>Post anonymously. No judgment, only solidarity.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📅</div>
+      <h3>Local events</h3>
+      <p>Find and create family meetups near you.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🍽</div>
+      <h3>Meal planner</h3>
+      <p>AI-powered weekly meals built for busy families.</p>
+    </div>
+  </div>
+
+  <div class="quote">
+    <p>"Finally an app that gets what it's actually like to be a parent."</p>
+    <span>Parentish · Ridgefield, CT</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="footer">
+    © 2026 Parentish &nbsp;·&nbsp;
+    <a href="mailto:support@parentish.app">Support</a>
+  </div>
+
+</body>
+</html>
